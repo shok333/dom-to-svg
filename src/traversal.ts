@@ -1,7 +1,7 @@
-import { isElement, isTextNode } from './dom'
-import { handleElement } from './element'
-import { handleTextNode } from './text'
-import { StackingLayers } from './stacking'
+import { isElement, isTextNode } from './dom.js'
+import { handleElement } from './element.js'
+import { handleTextNode } from './text.js'
+import { StackingLayers } from './stacking.js'
 
 export interface TraversalContext {
 	readonly svgDocument: XMLDocument

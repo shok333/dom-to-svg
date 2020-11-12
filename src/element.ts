@@ -1,13 +1,13 @@
-import { svgNamespace, isHTMLAnchorElement, isHTMLImageElement, isHTMLInputElement } from './dom'
-import { getAccessibilityAttributes } from './accessibility'
-import { TraversalContext, walkNode } from './traversal'
+import { svgNamespace, isHTMLAnchorElement, isHTMLImageElement, isHTMLInputElement } from './dom.js'
+import { getAccessibilityAttributes } from './accessibility.js'
+import { TraversalContext, walkNode } from './traversal.js'
 import {
 	createStackingLayers,
 	establishesStackingContext,
 	determineStackingLayer,
 	StackingLayers,
 	sortStackingLayerChildren,
-} from './stacking'
+} from './stacking.js'
 import {
 	copyCssStyles,
 	parseCssString,
@@ -17,9 +17,9 @@ import {
 	parseUrlReference,
 	hasUniformBorderRadius,
 	parseCSSLength,
-} from './css'
-import { assignTextStyles } from './text'
-import { doRectanglesIntersect } from './util'
+} from './css.js'
+import { assignTextStyles } from './text.js'
+import { doRectanglesIntersect } from './util.js'
 
 export function handleElement(element: Element, context: Readonly<TraversalContext>): void {
 	const cleanupFunctions: (() => void)[] = []

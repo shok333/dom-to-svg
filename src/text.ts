@@ -1,6 +1,6 @@
-import { svgNamespace } from './dom'
-import { TraversalContext } from './traversal'
-import { doRectanglesIntersect } from './util'
+import { svgNamespace } from './dom.js'
+import { TraversalContext } from './traversal.js'
+import { doRectanglesIntersect } from './util.js'
 
 export function handleTextNode(textNode: Text, context: TraversalContext): void {
 	if (!textNode.ownerDocument.defaultView) {

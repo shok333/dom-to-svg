@@ -1,9 +1,9 @@
-import { svgNamespace, isSVGImageElement, isSVGStyleElement, xlinkNamespace } from './dom'
-import { fetchAsDataURL as defaultFetchAsDataURL } from './inline'
-import { walkNode } from './traversal'
-import { createStackingLayers } from './stacking'
-import { createIdGenerator, withTimeout } from './util'
-import { isCSSFontFaceRule } from './css'
+import { svgNamespace, isSVGImageElement, isSVGStyleElement, xlinkNamespace } from './dom.js'
+import { fetchAsDataURL as defaultFetchAsDataURL } from './inline.js'
+import { walkNode } from './traversal.js'
+import { createStackingLayers } from './stacking.js'
+import { createIdGenerator, withTimeout } from './util.js'
+import { isCSSFontFaceRule } from './css.js'
 import cssValueParser from 'postcss-value-parser'
 
 export interface DomToSvgOptions {
@@ -131,4 +131,4 @@ export async function inlineResources(element: Element, options: InlineResources
 	await Promise.all([...element.children].map(element => inlineResources(element, options)))
 }
 
-export { fetchAsDataURL } from './inline'
+export { fetchAsDataURL } from './inline.js'
